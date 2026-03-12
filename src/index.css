@@ -1,0 +1,145 @@
+:root {
+  /* Malawi flag: black, red, green */
+  --mw-black: #000000;
+  --mw-red: #c8102e;
+  --mw-green: #007a33;
+
+  --text: #2d3436;
+  --text-muted: #5c6b7d;
+  --text-h: var(--mw-black);
+  --bg: #f8faf8;
+  --bg-card: #fff;
+  --border: #dde8e0;
+  --code-bg: #e8f0eb;
+  --accent: var(--mw-green);
+  --accent-hover: #006428;
+  --accent-secondary: var(--mw-red);
+  --accent-bg: rgba(0, 122, 51, 0.08);
+  --accent-border: rgba(0, 122, 51, 0.3);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
+
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --heading: 'Outfit', system-ui, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  font: 18px/1.6 var(--sans);
+  letter-spacing: 0.01em;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --text: #c8d4ce;
+    --text-muted: #8a9a92;
+    --text-h: #e8f0ec;
+    --bg: #0d120f;
+    --bg-card: #131a14;
+    --border: #243028;
+    --code-bg: #1a2420;
+    --accent: #00a040;
+    --accent-hover: #00c048;
+    --accent-bg: rgba(0, 122, 51, 0.15);
+    --accent-border: rgba(0, 122, 51, 0.4);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
+    --footer-bg: var(--mw-black);
+    --footer-text: #e0e6e0;
+  }
+}
+
+:root {
+  --footer-bg: var(--mw-black);
+  --footer-text: #e0e6e0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+#root {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--bg-card);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.02em;
+  margin: 24px 0 16px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 0.9em;
+  line-height: 1.4;
+  padding: 2px 6px;
+  background: var(--code-bg);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
