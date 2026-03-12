@@ -5,24 +5,6 @@ import AnimatedSection from './components/AnimatedSection';
 import logo from './assets/logo.png';
 import './App.css';
 
-const programCards = [
-  { icon: '🌐', title: 'Software & Systems Development', items: ['Web & mobile application development', 'Custom system design', 'UI/UX and prototyping'], tools: 'Django, React, Flutter, Git/GitHub, VS Code, Figma' },
-  { icon: '📡', title: 'Networking & IT Infrastructure', items: ['Network setup & maintenance', 'Practical labs for hands-on learning'], tools: 'Cisco Packet Tracer, GNS3, routers, switches, WiFi access points' },
-  { icon: '🔐', title: 'Cybersecurity & Digital Safety', items: ['Cybersecurity awareness & safe internet use', 'Ethical hacking basics'], tools: 'Kali Linux, Wireshark, virtual labs' },
-  { icon: '💻', title: 'Digital Literacy & Community Outreach', items: ['Basic computer skills', 'Safe digital communication', 'Workshops in rural communities'], tools: 'Computers, projectors, LibreOffice/Microsoft Office' },
-  { icon: '🎓', title: 'Training & Scholarship Programs', items: ['Bootcamps in web/mobile, networking, cybersecurity', 'Scholarships for underprivileged youth', 'Internship & mentorship pathways'] },
-  { icon: '🔬', title: 'Innovation & Research Hub', items: ['Prototype solutions for education, agriculture, health', 'Collaboration with universities & tech partners'], tools: 'Potential Partner: Mzuzu University' },
-] as const;
-
-const impactStats = [
-  { value: '500+', label: 'Students trained in ICT and cybersecurity' },
-  { value: '50+', label: 'Workshops in rural communities' },
-  { value: '100+', label: 'Scholarships for underprivileged youth' },
-  { value: '20+', label: 'Cybersecurity awareness campaigns' },
-] as const;
-
-const partners = ['Mzuzu University', 'MACRA', 'NGOs', 'Tech companies', 'Government institutions'] as const;
-
 function App() {
   return (
     <>
@@ -31,12 +13,7 @@ function App() {
       <header className="hero-section">
         <img src={logo} alt="MDICC logo" className="hero-image" />
         <h1>Malawi Digital Innovation &amp; Cybersecurity Centre</h1>
-        <h3 className="hero-slogan">Learn Digital. Stay Secure.</h3>
         <p>Empowering youth through digital skills, innovation, and cyber awareness.</p>
-        <div className="hero-cta">
-          <a href="#programs" className="primary-btn">Explore Programs</a>
-          <a href="#contact" className="secondary-btn">Support Our Mission</a>
-        </div>
       </header>
 
       <main className="content">
@@ -140,18 +117,6 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="impact">
-          <h2>Our Impact</h2>
-          <div className="impact-grid">
-            {impactStats.map(({ value, label }) => (
-              <div key={label} className="impact-card">
-                <span className="impact-value">{value}</span>
-                <p className="impact-label">{label}</p>
-              </div>
-            ))}
-          </div>
-        </AnimatedSection>
-
         <AnimatedSection id="objectives">
           <h2>Core Objectives</h2>
           <h3>ICT Training, Scholarships &amp; Mentorship</h3>
@@ -178,52 +143,56 @@ function App() {
         <AnimatedSection id="programs">
           <h2>Key Focus Areas / Programs</h2>
           <div className="programs-grid">
-            {programCards.map(({ icon, title, items, tools }) => (
-              <article key={title} className="program-card">
-                <span className="program-icon" aria-hidden>{icon}</span>
-                <h3>{title}</h3>
-                <ul>
-                  {items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                {tools && <p>{tools.startsWith('Potential') ? tools : `Tools: ${tools}`}</p>}
-              </article>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="partners">
-          <h2>Our Partners</h2>
-          <p className="partners-intro">
-            MDICC collaborates with universities, regulators, NGOs, and tech
-            partners to deliver impact across Malawi.
-          </p>
-          <div className="partners-grid">
-            {partners.map((name) => (
-              <div key={name} className="partner-card">{name}</div>
-            ))}
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="get-involved">
-          <h2>Get Involved</h2>
-          <p className="get-involved-intro">
-            Join us in building a digitally skilled and cyber-secure Malawi.
-          </p>
-          <div className="involved-buttons">
-            <a href="#contact" className="involved-btn primary">Donate</a>
-            <a href="#contact" className="involved-btn secondary">Volunteer</a>
-            <a href="#contact" className="involved-btn secondary">Partner With Us</a>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection id="contact">
-          <h2>Contact Us</h2>
-          <div className="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:info@mdicc.mw">info@mdicc.mw</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+2651234567">+265 1 234 567</a></p>
-            <p><strong>Location:</strong> Malawi</p>
+            <article className="program-card">
+              <h3>Software &amp; Systems Development</h3>
+              <ul>
+                <li>Web &amp; mobile application development</li>
+                <li>Custom system design</li>
+                <li>UI/UX and prototyping</li>
+              </ul>
+              <p>Tools: Django, React, Flutter, Git/GitHub, VS Code, Figma</p>
+            </article>
+            <article className="program-card">
+              <h3>Networking &amp; IT Infrastructure</h3>
+              <ul>
+                <li>Network setup &amp; maintenance</li>
+                <li>Practical labs for hands-on learning</li>
+              </ul>
+              <p>Tools: Cisco Packet Tracer, GNS3, routers, switches, WiFi access points</p>
+            </article>
+            <article className="program-card">
+              <h3>Cybersecurity &amp; Digital Safety</h3>
+              <ul>
+                <li>Cybersecurity awareness &amp; safe internet use</li>
+                <li>Ethical hacking basics</li>
+              </ul>
+              <p>Tools: Kali Linux, Wireshark, virtual labs</p>
+            </article>
+            <article className="program-card">
+              <h3>Digital Literacy &amp; Community Outreach</h3>
+              <ul>
+                <li>Basic computer skills</li>
+                <li>Safe digital communication</li>
+                <li>Workshops in rural communities</li>
+              </ul>
+              <p>Tools: Computers, projectors, LibreOffice/Microsoft Office</p>
+            </article>
+            <article className="program-card">
+              <h3>Training &amp; Scholarship Programs</h3>
+              <ul>
+                <li>Bootcamps in web/mobile, networking, cybersecurity</li>
+                <li>Scholarships for underprivileged youth</li>
+                <li>Internship &amp; mentorship pathways</li>
+              </ul>
+            </article>
+            <article className="program-card">
+              <h3>Innovation &amp; Research Hub</h3>
+              <ul>
+                <li>Prototype solutions for education, agriculture, health</li>
+                <li>Collaboration with universities &amp; tech partners</li>
+              </ul>
+              <p>Potential Partner: Mzuzu University</p>
+            </article>
           </div>
         </AnimatedSection>
       </main>
