@@ -7,10 +7,8 @@ const navItems = [
   { href: '#problem-statement', label: 'Problem' },
   { href: '#vision', label: 'Vision' },
   { href: '#mission', label: 'Mission' },
-  { href: '#impact', label: 'Impact' },
+  { href: '#objectives', label: 'Objectives' },
   { href: '#programs', label: 'Programs' },
-  { href: '#partners', label: 'Partners' },
-  { href: '#get-involved', label: 'Get Involved' },
   { href: '#contact', label: 'Contact' },
 ] as const;
 

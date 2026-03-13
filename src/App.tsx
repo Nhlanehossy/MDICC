@@ -13,7 +13,12 @@ function App() {
       <header className="hero-section">
         <img src={logo} alt="MDICC logo" className="hero-image" />
         <h1>Malawi Digital Innovation &amp; Cybersecurity Centre</h1>
+        <h3 className="hero-slogan">Learn Digital. Stay Secure.</h3>
         <p>Empowering youth through digital skills, innovation, and cyber awareness.</p>
+        <div className="hero-cta">
+          <a href="#programs" className="primary-btn">Explore Programs</a>
+          <a href="#contact" className="secondary-btn">Support Our Mission</a>
+        </div>
       </header>
 
       <main className="content">
@@ -144,6 +149,7 @@ function App() {
           <h2>Key Focus Areas / Programs</h2>
           <div className="programs-grid">
             <article className="program-card">
+              <span className="program-icon" aria-hidden>🌐</span>
               <h3>Software &amp; Systems Development</h3>
               <ul>
                 <li>Web &amp; mobile application development</li>
@@ -153,6 +159,7 @@ function App() {
               <p>Tools: Django, React, Flutter, Git/GitHub, VS Code, Figma</p>
             </article>
             <article className="program-card">
+              <span className="program-icon" aria-hidden>📡</span>
               <h3>Networking &amp; IT Infrastructure</h3>
               <ul>
                 <li>Network setup &amp; maintenance</li>
@@ -161,6 +168,7 @@ function App() {
               <p>Tools: Cisco Packet Tracer, GNS3, routers, switches, WiFi access points</p>
             </article>
             <article className="program-card">
+              <span className="program-icon" aria-hidden>🔐</span>
               <h3>Cybersecurity &amp; Digital Safety</h3>
               <ul>
                 <li>Cybersecurity awareness &amp; safe internet use</li>
@@ -169,6 +177,7 @@ function App() {
               <p>Tools: Kali Linux, Wireshark, virtual labs</p>
             </article>
             <article className="program-card">
+              <span className="program-icon" aria-hidden>💻</span>
               <h3>Digital Literacy &amp; Community Outreach</h3>
               <ul>
                 <li>Basic computer skills</li>
@@ -178,6 +187,7 @@ function App() {
               <p>Tools: Computers, projectors, LibreOffice/Microsoft Office</p>
             </article>
             <article className="program-card">
+              <span className="program-icon" aria-hidden>🎓</span>
               <h3>Training &amp; Scholarship Programs</h3>
               <ul>
                 <li>Bootcamps in web/mobile, networking, cybersecurity</li>
@@ -186,6 +196,7 @@ function App() {
               </ul>
             </article>
             <article className="program-card">
+              <span className="program-icon" aria-hidden>🔬</span>
               <h3>Innovation &amp; Research Hub</h3>
               <ul>
                 <li>Prototype solutions for education, agriculture, health</li>
@@ -193,6 +204,15 @@ function App() {
               </ul>
               <p>Potential Partner: Mzuzu University</p>
             </article>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection id="contact">
+          <h2>Contact Us</h2>
+          <div className="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:info@mdicc.mw">info@mdicc.mw</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+2651234567">+265 1 234 567</a></p>
+            <p><strong>Location:</strong> Malawi</p>
           </div>
         </AnimatedSection>
       </main>
