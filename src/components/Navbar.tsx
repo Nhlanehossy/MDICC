@@ -21,8 +21,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar" aria-label="Main navigation">
       <div className="navbar-container">
         <a href="#" className="logo" onClick={closeMenu} aria-label="MDICC Home">
-          <img src={logo} alt="" className="nav-logo" />
-          <span className="logo-text">MDICC</span>
+          <img src={logo} alt="MDICC" className="nav-logo" />
         </a>
         <button
           type="button"

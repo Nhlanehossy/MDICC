@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
 import logo from './assets/logo.png';
+import jo from './assets/jo.jpg';
 import './App.css';
 
 function App() {
@@ -204,7 +205,18 @@ function App() {
               <p>Potential Partner: Mzuzu University</p>
             </article>
           </div>
+        </AnimatedSection><AnimatedSection id="team">
+          <h2>Our Team</h2>
+          <div className="team-members">
+            <div className="team-member">
+              <img src={jo} alt="Jo" className="team-photo" />
+              <h3>Jo</h3>
+              <p>Founder & CEO</p>
+            </div>
+          </div>
         </AnimatedSection>
+
+
 
         <AnimatedSection id="contact">
           <h2>Contact Us</h2>
@@ -214,6 +226,8 @@ function App() {
             <p><strong>Location:</strong> Malawi</p>
           </div>
         </AnimatedSection>
+
+        
       </main>
 
       <Footer />
