@@ -43,25 +43,25 @@
   :root { font-size: 16px; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --text: #c5d0de;
-    --text-muted: #8b9aab;
-    --text-h: #e8eef4;
-    --bg: #0f1729;
-    --bg-card: #162033;
-    --border: #2a3654;
-    --code-bg: #1e2a42;
-    --accent: #00b347;
-    --accent-hover: #00c94e;
-    --accent-bg: rgba(0, 150, 57, 0.12);
-    --accent-border: rgba(0, 150, 57, 0.35);
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
-    --footer-bg: #0d1422;
-    --footer-text: #c5d0de;
-  }
+.dark {
+  color-scheme: dark;
+  --text: #ffffff;
+  --text-muted: #ffffff;
+  --text-h: #ffffff;
+  --bg: #0f1729;
+  --bg-card: #162033;
+  --border: #2a3654;
+  --code-bg: #1e2a42;
+  --accent: #00b347;
+  --accent-hover: #00c94e;
+  --accent-bg: rgba(0, 150, 57, 0.12);
+  --accent-border: rgba(0, 150, 57, 0.35);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --footer-bg: #0d1422;
+  --footer-text: #c5d0de;
+  --logo-navy: #a0aec0;
+  --logo-green: #48bb78;
 }
 
 html {

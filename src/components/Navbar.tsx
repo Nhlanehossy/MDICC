@@ -12,7 +12,7 @@ const navItems = [
   { href: '#contact', label: 'Contact' },
 ] as const;
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{ toggleDarkMode: () => void }> = ({ toggleDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
@@ -23,6 +23,14 @@ const Navbar: React.FC = () => {
         <a href="#" className="logo" onClick={closeMenu} aria-label="MDICC Home">
           <img src={logo} alt="MDICC" className="nav-logo" />
         </a>
+        <button
+          type="button"
+          className="dark-mode-toggle"
+          onClick={toggleDarkMode}
+          aria-label="Toggle dark mode"
+        >
+          🌙
+        </button>
         <button
           type="button"
           className="nav-toggle"

@@ -15,6 +15,19 @@ function App() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved ? JSON.parse(saved) : false;
+  });
+
+  const toggleDarkMode = () => {
+    setDarkMode(prev => {
+      const newMode = !prev;
+      localStorage.setItem('darkMode', JSON.stringify(newMode));
+      return newMode;
+    });
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
@@ -23,9 +36,17 @@ function App() {
     return () => clearInterval(interval);
   }, [teamMembers.length]);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <>
-      <Navbar />
+      <Navbar toggleDarkMode={toggleDarkMode} />
 
       <header className="hero-section">
         <img src={logo} alt="MDICC logo" className="hero-image" />
