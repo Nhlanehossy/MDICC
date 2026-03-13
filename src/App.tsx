@@ -24,6 +24,7 @@ function App() {
     setDarkMode(prev => {
       const newMode = !prev;
       localStorage.setItem('darkMode', JSON.stringify(newMode));
+      console.log('Toggling dark mode to:', newMode);
       return newMode;
     });
   };
@@ -42,6 +43,7 @@ function App() {
     } else {
       document.body.classList.remove('dark');
     }
+    console.log('Dark mode applied:', darkMode);
   }, [darkMode]);
 
   return (
