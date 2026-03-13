@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
@@ -6,6 +7,22 @@ import jo from './assets/jo.jpg';
 import './App.css';
 
 function App() {
+  const teamMembers = [
+    { name: 'Jo', role: 'Founder & CEO', photo: jo },
+    { name: 'Alex', role: 'CTO', photo: jo },
+    { name: 'Maria', role: 'Program Manager', photo: jo },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
+    }, 30000); // 30 seconds
+
+    return () => clearInterval(interval);
+  }, [teamMembers.length]);
+
   return (
     <>
       <Navbar />
@@ -209,9 +226,9 @@ function App() {
           <h2>Our Team</h2>
           <div className="team-members">
             <div className="team-member">
-              <img src={jo} alt="Jo" className="team-photo" />
-              <h3>Jo</h3>
-              <p>Founder & CEO</p>
+              <img src={teamMembers[currentIndex].photo} alt={teamMembers[currentIndex].name} className="team-photo" />
+              <h3>{teamMembers[currentIndex].name}</h3>
+              <p>{teamMembers[currentIndex].role}</p>
             </div>
           </div>
         </AnimatedSection>
